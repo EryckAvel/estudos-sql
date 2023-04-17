@@ -1,0 +1,34 @@
+-- CRIANDO TABELAS E TRABALHANDO COM RELACIONAMENTOS --
+
+-- CRIANDO TABELAS COM PK --
+
+DROP TABLE curso;
+CREATE TABLE curso(
+	--id INTEGER NOT NULL UNIQUE,
+	id INTEGER PRIMARY KEY,
+	nome VARCHAR(255) NOT NULL
+);
+
+INSERT INTO curso(id, nome)
+VALUES (NULL,NULL);
+
+INSERT INTO curso(id, nome)
+VALUES (1,'Java'),(2,'HTML');
+
+SELECT * FROM curso;
+
+-- TRABALHANDO COM FK --
+
+DROP TABLE aluno;
+
+CREATE TABLE aluno(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(255) NOT NULL
+);
+
+INSERT INTO aluno (nome)
+VALUES ('Eryck Calisto Avelino'),('Nicolas Calisto Avelino')
+
+SELECT * FROM aluno;
+SELECT * FROM curso;
+

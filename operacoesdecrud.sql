@@ -6,7 +6,7 @@ INSERT INTO aluno (nome,cpf,observacao,idade,dinheiro,altura,ativo,data_nascimen
 VALUES('Nicolas Calisto Avelino','93255621119','Segundo insert no banco de dados',18,0.50,1.80,true,'2005/02/10','01:10:00','2023/04/13 13:20:00');	
 
 INSERT INTO aluno (nome,cpf,observacao,idade,dinheiro,altura,ativo,data_nascimento,hora_aula,cadastro)
-VALUES('Eryck Calisto Avelino','63187948324','Novo aluno',20,1000.00,1.85,true,'2003/03/30','01:10:00','2023/04/17 09:25:00');	
+VALUES('Eryck Calisto Avelino','','Novo aluno',20,1000.00,1.85,true,'2003/03/30','01:10:00','2023/04/17 09:25:00');	
 
 SELECT * FROM aluno;
 
@@ -30,7 +30,7 @@ SET nome = 'Nicolas Calisto Avelino', cpf = '93255621119', observacao = 'Atualiz
 WHERE id = 2;
 
 UPDATE aluno
-SET nome = 'Eryck Calisto Avelino', cpf = '63187948324', observacao = 'Novo aluno', idade = 20, dinheiro = 100.00, altura = 1.85, ativo = true
+SET nome = 'Eryck Calisto Avelino', cpf = '', observacao = 'Novo aluno', idade = 20, dinheiro = 100.00, altura = 1.85, ativo = true
 WHERE id = 2;
 
 -- EX002
