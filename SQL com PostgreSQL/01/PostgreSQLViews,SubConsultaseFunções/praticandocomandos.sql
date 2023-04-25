@@ -21,14 +21,24 @@ JOIN curso c ON  c.id = ac.curso_id;
 SELECT
 	a.nome as nomealuno,
 	a.sobrenome,
-	a.datanascimento, 
-	c.nome as curso,
-	COUNT(c.id) numero_alunos
+	COUNT(c.id) numero_cursos
 FROM aluno a
 JOIN aluno_curso ac ON ac.aluno_id = a.id
 JOIN curso c ON  c.id = ac.curso_id
-GROUP BY 1,2,3,4
+JOIN categoria c2 ON c2.id = c.categoria_id
+GROUP BY 1,2
+ORDER BY numero_cursos DESC
+LIMIT 1;
+
+-- relatorio que busca o aluno que mais realiza cursos
+
+-- RELATORIO DE CURSO MAIS REQUISITADO --
+
+SELECT 
+	c.nome as curso,
+	COUNT(ac.aluno_id) as numero_alunos
+FROM curso c
+JOIN aluno_curso ac ON ac.curso_id = c.id
+GROUP BY 1
 ORDER BY numero_alunos DESC;
-
-
 
